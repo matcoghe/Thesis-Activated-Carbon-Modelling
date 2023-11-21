@@ -878,7 +878,7 @@ class PSDM():
             
             writer = pd.ExcelWriter('ssq_'+self.carbon+'-'+compound+'.xlsx')
             ssqs.to_excel(writer, 'Sheet1')
-            writer.close()
+            #writer.close()
         
         else: #assume test_range and xn_range are single values
             best_val_xn = self.xn_range[0]
@@ -911,7 +911,7 @@ class PSDM():
             data_tmp.to_excel(writer, 'parameters')
 
             ti.sleep(1)
-            writer.close()
+            #writer.close()
             
         return compound, best_val_k, best_val_xn, ssqs, model_data
     #end kfit
@@ -1151,7 +1151,7 @@ class PSDM():
             
             writer = pd.ExcelWriter('ssq_'+self.carbon+'-'+compound+'.xlsx')
             ssqs.to_excel(writer, 'Sheet1')
-            writer.close()
+            #writer.close()
         
         else: #assume test_range and xn_range are single values
             best_val_ds = self.test_range[0] * ds_base
@@ -1183,7 +1183,7 @@ class PSDM():
         data_tmp.to_excel(writer, 'parameters')
         if self.optimize_flag:
             ti.sleep(1)
-            writer.close()
+            #writer.close()
             
         return compound, best_val_ds, ssqs, model_data, ds_base
     #end dsfit
@@ -1384,7 +1384,7 @@ class PSDM():
             if save_file:
                 writer = pd.ExcelWriter(f"ssq_{self.carbon}-{compound}.xlsx")
                 ssqs.to_excel(writer, 'Sheet1')
-                writer.close()
+                #writer.close()
                 
                 writer = pd.ExcelWriter(self.project_name+'_'+self.carbon + '-' + \
                                         compound+'.xlsx')
@@ -1398,7 +1398,7 @@ class PSDM():
                              min_val, self.ebct, self.sf], \
                              index=['Re','K','1/n','ssq','ebct','sf'])
                 data_tmp.to_excel(writer, 'parameters')
-                writer.close()
+                #writer.close()
             
             self.k_data[compound]['K'] = best_val_k
             self.k_data[compound]['1/n'] = best_val_xn
@@ -1705,7 +1705,7 @@ class PSDM():
             '''
             writer = pd.ExcelWriter('best_fits-'+self.project_name+'.xlsx')
             self.k_data.to_excel(writer, 'Sheet1')
-            writer.close()
+            #writer.close()
             pass
         
         #reset original values
@@ -2183,7 +2183,7 @@ class PSDM():
                 if save_file:
                     writer = pd.ExcelWriter(f"ssq_{self.carbon}-{compound}.xlsx")
                     ssqs.to_excel(writer, 'Sheet1')
-                    writer.close()
+                    #writer.close()
                     
                     writer = pd.ExcelWriter(self.project_name+'_'+self.carbon + '-' + \
                                             compound+'.xlsx')
@@ -2197,7 +2197,7 @@ class PSDM():
                                   min_val, self.ebct, self.sf], \
                                   index=['Re','K','1/n','ssq','ebct','sf'])
                     data_tmp.to_excel(writer, 'parameters')
-                    writer.close()
+                    #writer.close()
                 
                 self.k_data[compound]['K'] = best_val_k * 1
                 self.k_data[compound]['1/n'] = best_val_xn * 1

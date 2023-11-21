@@ -4,7 +4,7 @@
 - Open-source code from USEPA that I adjusted.
 - PSDM/Example_isotherm.py: Is interesting Python example about isotherm fitting (Freundlich and Langmuir). I did some changes and I can run it.
 - PSDM/Example_TCE.py: Is interesting Python example of the PSDM code. I did some changes and I can run it, but not properly yet.
-- PSDM/Simple_Example.ipynb: Is simple, very basic Notebook example about PSDM code. I still need to check this.
+- PSDM/Simple_Example.ipynb: Is simple, very basic Notebook example about PSDM code.
 - 1Linked_files: Article pdf that uses this USEPA PSDM model for PFAS removal on pilot scale + Excel with data from article.
 - Would be interesting to check this code after I know more about what is behind the theoretical PSDM model and then I can maybe look if I can use the data from the Excel in the simulation.
 
