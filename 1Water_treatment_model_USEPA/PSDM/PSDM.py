@@ -74,9 +74,9 @@ def run_MP_helper(test_column, k, invN, compound, k_mult):
     return [k, invN, ssqs.values[0][0], compound, k_mult]
 
 class PSDM():
-    def __init__(self, column_data, comp_data, rawdata_df, **kw):
+    def __init__(self, column_data, comp_data, rawdata_df, **kw):           #mathieu: **kw = keywords
         '''
-        column_data: contains specific characteristics of the column (pandas_df)
+        column_data: contains specific characteristics of the column (pandas_df)     #mathieu: in red = not executing code
             'L'     = length (cm)
             'diam'  = diameter (cm)
             'wt'    = mass of carbon (g)
@@ -95,7 +95,7 @@ class PSDM():
         data_df: contains raw data associated with the column
             should contain influent and effluent data for the column
         
-        keywords:
+        keywords:                                                                      #mathieu: **kw
             project_name: (default = PSDM)
             nr: number of radial collocation points (int, default = 14)
             nz: number of axial collocation points (int, default = 19)
