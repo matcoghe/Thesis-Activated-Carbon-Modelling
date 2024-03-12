@@ -489,7 +489,7 @@ foul_params = {'water':{'Organic Free':[1.,          0.,    0.,       0.],     #
                            'Houghton': [0.66, - 1.55e-7,  0.34, -7.29e-5]}, 
                'chemical':{'halogenated alkanes': [b1, b2],                 #b1,b2
                            'halogenated alkanes QSPR': [b1, b2],
-                           'halogenated alkenes': [b1 , b2],
+                           'halogenated alkenes': [1.0 , 0.0],                #default is halogenated alkenes when no chemical_type given
                            'trihalo-methanes': [b1, b2],
                            'aromatics': [b1, b2],
                            'nitro compounds': [b1, b2],
@@ -529,46 +529,47 @@ foul_params = {'water':{'Organic Free':[1.,          0.,    0.,       0.],     #
                                     'Ave': [b1, b2]} 
                            }}
 ############################################################################## //Mathieu: original:
-# 'chemical':{'halogenated alkanes': [1.2, -0.2],
-#                            'halogenated alkanes QSPR': [1.22, -0.12],
-#                            'halogenated alkenes': [1.0 , 0.0],
-#                            'trihalo-methanes': [1.0, 0.0],
-#                            'aromatics': [0.9, 0.1],
-#                            'nitro compounds': [0.75, 0.25],
-#                            'chlorinated hydrocarbon': [0.59, 0.41],
-#                            'phenols': [0.65, 0.35],
-#                            'PNAs': [0.32, 0.68],
-#                            'pesticides': [0., 0.05],
-#                            'PFAS': {'PFBA': [0.82, 0.12],
-#                                     'PFPeA': [0.67, 0.19],
-#                                     'PFHxA': [0.55, 0.28],
-#                                     'PFHpA': [0.44, 0.36],
-#                                     'PFOA': [0.34, 0.44],
-#                                     'PFNA': [0.24, 0.53],
-#                                     'PFDA': [0.17, 0.61],
-#                                     'PFBS': [0.68, 0.24],
-#                                     'PFHxS': [0.44, 0.48],
-#                                     'PFHpS': [0.34, 0.57],
-#                                     'PFOS': [0.25, 0.66],
-#                                     'PFMOAA': [0.88, 0.055],
-#                                     'PFO2HxA': [0.63, 0.17],
-#                                     'PFO3OA': [0.43, 0.27],
-#                                     'GenX': [0.50, 0.34],
-#                                     'PFO4DA': [0.25, 0.37],
-#                                     'NafionBP2': [0.29, 0.63],
-#                                     '62FTS': [0.38, 0.62],
-#                                     '82FTS': [0.20, 0.79],
-#                                     ## Extra, extrapoloated/estimated from above
-#                                     'PFPrS': [0.63, 0.14], # linear extrapolation for sulfonated C3
-#                                     'PMPA': [0.63, 0.17],  # copied from PFO2HxA, similar #C #F ether
-#                                     'PFPeS': [0.49, 0.35], ## linear interpolation for sulfonated C5
-#                                     'PFPrA': [0.88, 0.03], ## linear interpolation for PFCAs C3
-#                                     # special added for QSPR Paper
-#                                     'TCE': [1.0, 0.],
-#                                     'PFOS_sp': [1.22, -0.12],
-#                                     'PFOA_sp': [1.22, -0.12],
-#                                     #average, do not use generally
-#                                     'Ave': [0.45, 0.41]} 
+                # 'chemical':{'halogenated alkanes': [1.2, -0.2],
+                #                            'halogenated alkanes QSPR': [1.22, -0.12],
+                #                            'halogenated alkenes': [1.0 , 0.0],
+                #                            'trihalo-methanes': [1.0, 0.0],
+                #                            'aromatics': [0.9, 0.1],
+                #                            'nitro compounds': [0.75, 0.25],
+                #                            'chlorinated hydrocarbon': [0.59, 0.41],
+                #                            'phenols': [0.65, 0.35],
+                #                            'PNAs': [0.32, 0.68],
+                #                            'pesticides': [0., 0.05],
+                #                            'PFAS': {'PFBA': [0.82, 0.12],
+                #                                     'PFPeA': [0.67, 0.19],
+                #                                     'PFHxA': [0.55, 0.28],
+                #                                     'PFHpA': [0.44, 0.36],
+                #                                     'PFOA': [0.34, 0.44],
+                #                                     'PFNA': [0.24, 0.53],
+                #                                     'PFDA': [0.17, 0.61],
+                #                                     'PFBS': [0.68, 0.24],
+                #                                     'PFHxS': [0.44, 0.48],
+                #                                     'PFHpS': [0.34, 0.57],
+                #                                     'PFOS': [0.25, 0.66],
+                #                                     'PFMOAA': [0.88, 0.055],
+                #                                     'PFO2HxA': [0.63, 0.17],
+                #                                     'PFO3OA': [0.43, 0.27],
+                #                                     'GenX': [0.50, 0.34],
+                #                                     'PFO4DA': [0.25, 0.37],
+                #                                     'NafionBP2': [0.29, 0.63],
+                #                                     '62FTS': [0.38, 0.62],
+                #                                     '82FTS': [0.20, 0.79],
+                #                                     ## Extra, extrapoloated/estimated from above
+                #                                     'PFPrS': [0.63, 0.14], # linear extrapolation for sulfonated C3
+                #                                     'PMPA': [0.63, 0.17],  # copied from PFO2HxA, similar #C #F ether
+                #                                     'PFPeS': [0.49, 0.35], ## linear interpolation for sulfonated C5
+                #                                     'PFPrA': [0.88, 0.03], ## linear interpolation for PFCAs C3
+                #                                     # special added for QSPR Paper
+                #                                     'TCE': [1.0, 0.],
+                #                                     'PFOS_sp': [1.22, -0.12],
+                #                                     'PFOA_sp': [1.22, -0.12],
+                #                                     #average, do not use generally
+                #                                     'Ave': [0.45, 0.41]} 
+                #             }}
 #Update PFHpS
 
 # =============================================================================
