@@ -412,6 +412,7 @@ class PSDM():
                 data_store[comp] = interp1d(t,\
                                             k_mult_pd, \
                                             fill_value='extrapolate')
+                print('//Mathieu: k_mult_pd: ',k_mult_pd)
             return data_store
         
     def __calculate_capacity(self, compound):

@@ -468,7 +468,7 @@ foul_params = {'water':{'Organic Free':[1.,          0.,    0.,       0.],
                            'Houghton': [0.66, - 1.55e-7,  0.34, -7.29e-5]}, 
                'chemical':{'halogenated alkanes': [1.2, -0.2],
                            'halogenated alkanes QSPR': [1.22, -0.12],
-                           'halogenated alkenes': [1.0 , 0.0],
+                           'halogenated alkenes': [1.0 , 0.0], #default
                            'trihalo-methanes': [1.0, 0.0],
                            'aromatics': [0.9, 0.1],
                            'nitro compounds': [0.75, 0.25],

@@ -385,7 +385,7 @@ class PSDM():
         rk1 = b1 * a1 + b2
         rk2 = b1 * a2
         rk3 = b1 * a3
-        rk4 = b1 * a4 #no factor of 100, in exponent (should there be b1?)
+        rk4 = b1 * a4                 #no factor of 100, in exponent (should there be b1?)
         print('//Mathieu: fouling parameters:')
         print('a1: ',a1)
         print('a2: ',a2)

@@ -475,7 +475,7 @@ class PSDM():
         carbon_mass = self.wt   ## should be in grams
                 
         xn_f_range = np.arange(0.15, 1.001, 0.01)  # sets up xn_range for returned interpolating function
-        times_to_test = np.arange(self.duration + 1) ## returns a list of days 
+        times_to_test = np.arange(self.duration + data_df1) ## returns a list of days 
         
         k_function = interp1d(xn_f_range, np.ones(len(xn_f_range))) ## creates empty function so something will be returned
         
